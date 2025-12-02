@@ -6,7 +6,7 @@ metadata:
     purpose: replicaset 
     project: roboshop
 spec:
-  replicas: 3
+  replicas: 6
   selector:
     matchLabels:
       purpose: replicaset 

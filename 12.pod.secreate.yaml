@@ -8,4 +8,5 @@ spec:
     image: nginx:1.14.2
     envFrom:
       - secretRef:
-        name: secret-demo
+          name: secret-demo
+  

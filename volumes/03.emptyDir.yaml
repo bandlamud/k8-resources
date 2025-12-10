@@ -6,6 +6,19 @@ spec:
   containers:
   - name: nginx
     image: nginx
+    volumeMounts:
+    - mountPath: /var/log/nginx/
+      name: nginx-logs
+
   - name: almalinux
     image: almalinux:9
     command: ["sleep","1000"]
+    volumeMounts:
+    - mountPath: /mnt/nginx-logs
+      name: nginx-logs
+      readOnly: true
+  
+  volumes:
+  - name: nginx-logs
+    emptyDir:
+      sizeLimit: 500Mi

@@ -26,7 +26,7 @@ kind: Service
 metadata:
   name: nginx-np
 spec:
-  type: NodePort
+  type: Service
   selector:
     project: roboshop
     purpose: headless-svc-demo
@@ -41,7 +41,6 @@ metadata:
   name: nginx-np
 spec:
   ClusterIP: None
-  type: NodePort
   selector:
     project: roboshop
     purpose: headless-svc-demo
